@@ -20,8 +20,8 @@ jobs:
       run: pip install -r requirements.txt
     - name: execute model
       run: python flowers-model.py
-#    - name: show dir
-#      run: ls -la flowers-model
+    - name: show dir
+      run: ls -la flowers-model
 
     - name: docker login
       env:
