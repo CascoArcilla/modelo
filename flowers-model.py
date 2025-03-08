@@ -83,7 +83,7 @@ model.compile(optimizer=Adam(learning_rate=0.001),
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-model.fit(train,labels, epochs=20)
+model.fit(train,labels, epochs=50)
 
 export_path = 'flowers-model/1/'
 #export_path = ''
