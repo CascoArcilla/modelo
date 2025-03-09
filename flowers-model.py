@@ -74,7 +74,9 @@ labels = np.array(labels)
 model = keras.Sequential([
     keras.layers.Flatten(input_shape=(64,64,3)),
     keras.layers.Dense(128, activation=tf.nn.tanh),
+    keras.layers.Dense(128, activation=tf.nn.tanh),
     keras.layers.Dense(64, activation=tf.nn.tanh),
+    keras.layers.Dense(32, activation=tf.nn.tanh),
     keras.layers.Dense(10, activation=tf.nn.softmax)
 ])
 
@@ -84,7 +86,7 @@ model.compile(optimizer=Adam(learning_rate=0.001),
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-model.fit(train,labels, epochs=40)
+model.fit(train,labels, epochs=60)
 
 export_path = 'flowers-model/1/'
 #export_path = ''
