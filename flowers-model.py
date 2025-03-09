@@ -75,8 +75,7 @@ model = keras.Sequential([
     keras.layers.Flatten(input_shape=(64,64,3)),
     keras.layers.Dense(128, activation=tf.nn.tanh),
     keras.layers.Dense(128, activation=tf.nn.tanh),
-    keras.layers.Dense(64, activation=tf.nn.tanh),
-    keras.layers.Dense(32, activation=tf.nn.tanh),
+    keras.layers.Dense(128, activation=tf.nn.tanh),
     keras.layers.Dense(10, activation=tf.nn.softmax)
 ])
 
